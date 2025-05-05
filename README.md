@@ -1,38 +1,56 @@
-# 🐍 Zlib & Base64 / Marshal Decoder
+# 🐍 **Zlib & Base64 / Marshal Decoder**
 
-> Python Obfuscation Decoder Tool  
+> **Python Obfuscation Decoder Tool**  
 > Created with ❤️ by [@IPLegion](https://t.me/IPLegion) & [@ferotier](https://t.me/ferotier)
 
 ---
 
-## 📦 Installation  
-**Copy repository from github**
+## 📦 **Installation**  
+
+1. **Clone the repository from GitHub:**
+
     ```bash
     git clone https://github.com/terified/CryptoSec.git
     ```
-    **Go to the tool directory**
+
+2. **Navigate to the tool's directory:**
+
     ```bash
     cd CryptoSec
     ```
-    **Install required modules**
+
+3. **Install the required modules:**
+
     ```bash
     python install_modules.py
     ```
-    **Run the CryptoSec**
-        ```bash
+
+4. **Run CryptoSec:**
+
+    ```bash
     python main.py
     ```
-📖 How to Use
-🔓 Decode Zlib & Base64
-Copy the obfuscated string from your Python file.
 
-Open this file:
-C:\Users\Alex\Desktop\CryptoSec\base64_zlib_decode.txt
-Paste your string in the following format:
-exec((_)(b'your_encoded_string_here'))
-📌 Example:
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]))
-exec((_)(b'VeryObfuscatedBase64String=='))
+---
+
+## 📖 **How to Use**
+
+### 🔓 **Decode Zlib & Base64**
+
+1. Copy the obfuscated string from your Python file.
+
+2. Open the following file:
+    - `C:\Users\Alex\Desktop\CryptoSec\base64_zlib_decode.txt`
+
+3. Paste your obfuscated string in this format:
+    ```python
+    exec((_)(b'your_encoded_string_here'))
+    ```
+
+   **Example:**
+   ```python
+   _ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]))
+   exec((_)(b'VeryObfuscatedBase64String=='))
 Run the decoder script — it will automatically read from base64_zlib_decode.txt and save the result.
 
 🔓 Decode Marshal, Gzip, Lzma, Zlib & Base64
