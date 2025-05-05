@@ -8,11 +8,9 @@ from decoder_core import (
     mzb
 )
 
-# Проверка на платформу Windows для скрытия консоли
 if os.name == 'nt':
     ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 3)
 
-# Цветовые темы для переливания
 colors_themes = [
     Colors.red_to_yellow,
     Colors.green_to_cyan,
@@ -26,7 +24,6 @@ colors_themes = [
     Colors.yellow_to_red
 ]
 
-# Названия для выбора
 theme_names = [
     "Red → Yellow",
     "Green → Turquoise",
@@ -40,7 +37,6 @@ theme_names = [
     "Yellow → Red"
 ]
 
-# Баннер
 banner_txt = '''  
   ▄▄█▀▀▀█▄█                              ██            ▄█▀▀▀█▄█                 
 ▄██▀     ▀█                              ██           ▄██    ▀█                 
@@ -66,12 +62,10 @@ menu_txt = '''
                                   ╚═════════════════════════════════════════╝
 '''
 
-# Функция для отображения баннера
 def print_banner(color_theme):
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Colorate.Vertical(color_theme, banner_txt))
 
-# Функция выбора темы
 def choose_theme():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Select the interface color theme:\n")
@@ -86,7 +80,6 @@ def choose_theme():
         else:
             print("❌ Invalid input. Try again.")
 
-# Функция меню
 def show_menu(color_theme):
     print(Colorate.Vertical(color_theme, menu_txt))
     choice = input("\nSelect option: ")
@@ -103,7 +96,6 @@ def show_menu(color_theme):
     else:
         print("❌ Incorrect option.")
 
-# Запуск программы
 if __name__ == "__main__":
     selected_theme = choose_theme()
     print_banner(selected_theme)
