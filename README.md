@@ -1,5 +1,19 @@
 # 🐍 **Zlib & Base64 / Marshal Decoder**
 
+'''  
+  ▄▄█▀▀▀█▄█                              ██            ▄█▀▀▀█▄█                 
+▄██▀     ▀█                              ██           ▄██    ▀█                 
+██▀       ▀███▄███▀██▀   ▀██▀████████▄██████  ▄██▀██▄▀███▄     ▄▄█▀██  ▄██▀██  
+██          ██▀ ▀▀  ██   ▄█   ██   ▀██  ██   ██▀   ▀██ ▀█████▄▄█▀   ███▀   ██  
+██▄         ██       ██ ▄█    ██    ██  ██   ██     ██     ▀████▀▀▀▀▀▀█        
+▀██▄     ▄▀ ██        ███     ██   ▄██  ██   ██▄   ▄███     ████▄    ▄█▄    ▄  
+  ▀▀█████▀▄████▄      ▄█      ██████▀   ▀████ ▀█████▀█▀█████▀  ▀█████▀█████▀  
+                     ▄█        ██                                              
+                    ██▀       ▄████▄                                           
+                                                 telegram: t.me/ferotier        
+                                           by yatomuro | decompile & decode tool
+'''
+
 > **Python Obfuscation Decoder Tool**  
 > Created with ❤️ by [@IPLegion](https://t.me/IPLegion) & [@ferotier](https://t.me/ferotier)
 
@@ -63,12 +77,6 @@ Provide the path to this file when prompted by the decoder program.
 **📌 Example:**
 _=lambda __:__import__('marshal').loads(__import__('gzip').decompress(__import__('lzma').decompress(__import__('zlib').decompress(__import__('base64').b64decode(__[::-1])))))
 exec(_('AnotherObfuscatedString'))
-
-**⚡ Console Preview**
-```C:\CryptoSec> python decoder_script.py```
-
-[+] Decoding complete!
-[+] Saved to: pyc_files/output.pyc
 
 **🎨 Authors**
 @IPLegion
