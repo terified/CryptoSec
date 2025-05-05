@@ -49,7 +49,6 @@ def mzb():
     file_path = input('📄 Path to .txt file with encoded string: ')
     output_name = input('💾 Output filename (without .py): ')
     
-    # Читаем строку из txt
     try:
         with open(file_path, 'r') as f:
             content = f.read().strip()
@@ -57,7 +56,6 @@ def mzb():
         print('❌ File not found!')
         return
 
-    # Формируем код, который будет декомпилироваться
     temp_code = f'''
 from sys import stdout
 from uncompyle6.main import decompile
@@ -67,17 +65,14 @@ x = marshal.loads(zlib.decompress(base64.b64decode({repr(content)})))
 decompile(2.7, x, stdout)
 '''
 
-    # Создаём временный файл
     os.makedirs('pyc_files', exist_ok=True)
     temp_file = 'mi_temp.py'
     with open(temp_file, 'w') as f:
         f.write(temp_code)
 
-    # Запускаем декомпиляцию
     output_path = f'pyc_files/{output_name}.py'
     os.system(f'python2 {temp_file} > "{output_path}"')
 
-    # Удаляем временный файл
     os.remove(temp_file)
 
     print(f'✅ Decompiled code saved to: {output_path}')
@@ -90,38 +85,30 @@ decompile(2.7, x, stdout)
         print('👋 Done.')
 
 def save_encrypted_code():
-    # Заданный путь к файлу с кодом
     file_path = r"C:\Users\h1xx\Desktop\CryptoSec\base64_zlib_decode.txt"
 
     if not os.path.isfile(file_path):
         print("[-] File not found.")
         return
 
-    # Чтение содержимого файла в переменную code
     with open(file_path, "rb") as f:
         code = f.read()
 
-    # Регулярка для поиска твоего exec((_)(b'...'))
     regex = re.compile(rb"^exec\(\(_\)\(b'(.+)'\)\)$")
 
-    # Цикл декодирования
     while True:
         result = regex.search(code)
         if not result:
             break
         code = func(result.group(1))
 
-    # Запрос имени для pyc файла
     output_name = input("Enter a name for the pyc file (without .py): ") or "output"
     output_folder = input("Enter the save path (or press Enter to use the pyc_files folder): ") or "pyc_files"
 
-    # Создание папки если её нет
     os.makedirs(output_folder, exist_ok=True)
 
-    # Путь для сохранения файла
     output_path = os.path.join(output_folder, output_name + ".pyc")
 
-    # Сохраняем в файл
     with open(output_path, "wb") as f:
         f.write(code)
 
@@ -137,7 +124,7 @@ def decode_and_save(data, filename):
         code_obj = marshal.loads(decoded)       # Unmarshal
 
         with open(filename, 'wb') as f:
-            f.write(code_obj)  # Save the final decoded data
+            f.write(code_obj) 
         print(f"Decoded data saved as {filename}")
     except Exception as e:
         print(f"[!] Error in decode_and_save: {e}")
