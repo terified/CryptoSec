@@ -6,12 +6,22 @@
 ---
 
 ## 📦 Installation  
-
-```bash
-git clone https://github.com/terified/CryptoSec.git
-cd CryptoSec
-python install_modules.py
-python main.py
+**Copy repository from github**
+    ```bash
+    git clone https://github.com/terified/CryptoSec.git
+    ```
+    **Go to the tool directory**
+    ```bash
+    cd CryptoSec
+    ```
+    **Install required modules**
+    ```bash
+    python install_modules.py
+    ```
+    **Run the CryptoSec**
+        ```bash
+    python main.py
+    ```
 📖 How to Use
 🔓 Decode Zlib & Base64
 Copy the obfuscated string from your Python file.
