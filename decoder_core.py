@@ -11,10 +11,10 @@ def clear():
 import os
 
 def decode_string_input():
-    file_path = input("Укажи путь до файла со строкой: ")
+    file_path = input("Specify the path to the file containing the string: ")
 
     if not os.path.isfile(file_path):
-        print("[-] Файл не найден.")
+        print("[-] File not found.")
         return
 
     try:
@@ -22,7 +22,7 @@ def decode_string_input():
             encrypted_string = file.read()
 
         if not encrypted_string:
-            print("[-] Строка в файле пуста.")
+            print("[-] The string in the file is empty.")
             return
 
         encrypted_string = encrypted_string.replace("\n", "").replace(" ", "")
@@ -30,8 +30,8 @@ def decode_string_input():
         if missing_padding:
             encrypted_string += '=' * (4 - missing_padding)
 
-        output_name = input("Введи имя для pyc файла (без .pyc): ") or "output"
-        output_folder = input("Введи путь для сохранения (или Enter для папки pyc_files): ") or "pyc_files"
+        output_name = input("Enter a name for the pyc file (without .pyc): ") or "output"
+        output_folder = input("Enter the save path (or press Enter to use the pyc_files folder): ") or "pyc_files"
 
         os.makedirs(output_folder, exist_ok=True)
         output_path = os.path.join(output_folder, f"{output_name}.pyc")
@@ -39,7 +39,7 @@ def decode_string_input():
         decode_and_save(encrypted_string, output_path)
 
     except Exception as e:
-        print(f"[-] Ошибка при обработке файла: {e}")
+        print(f"[-] Error while processing the file: {e}")
 
 def func(code):
     return zlib.decompress(base64.b64decode(code[::-1]))
@@ -94,7 +94,7 @@ def save_encrypted_code():
     file_path = r"C:\Users\h1xx\Desktop\CryptoSec\base64_zlib_decode.txt"
 
     if not os.path.isfile(file_path):
-        print("[-] Файл не найден.")
+        print("[-] File not found.")
         return
 
     # Чтение содержимого файла в переменную code
@@ -112,8 +112,8 @@ def save_encrypted_code():
         code = func(result.group(1))
 
     # Запрос имени для pyc файла
-    output_name = input("Введи имя для pyc файла (без .py): ") or "output"
-    output_folder = input("Введи путь для сохранения (или Enter для папки pyc_files): ") or "pyc_files"
+    output_name = input("Enter a name for the pyc file (without .py): ") or "output"
+    output_folder = input("Enter the save path (or press Enter to use the pyc_files folder): ") or "pyc_files"
 
     # Создание папки если её нет
     os.makedirs(output_folder, exist_ok=True)
