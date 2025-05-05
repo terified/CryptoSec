@@ -10,7 +10,8 @@
 ```bash
 git clone https://github.com/terified/CryptoSec.git
 cd CryptoSec
-python pip install -r requirements.txt
+python install_modules.py
+python main.py
 📖 How to Use
 🔓 Decode Zlib & Base64
 Copy the obfuscated string from your Python file.
