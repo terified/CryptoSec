@@ -1,16 +1,5 @@
 # 🐍 **Zlib & Base64 / Marshal Decoder**
 
-'''  
- ___                   _         ___           
-|  _] _ _  _ _  ___  _| |_  ___ / __] ___  ___ 
-| [__| '_]| | || . \  | |  / . \\__ \/ ._]/ | '
-`___/|_|   \  ||  _/  |_|  \___/[___/\___.\_|_.
-           [__/|_|                             
-
-                                                 telegram: t.me/ferotier        
-                                           by yatomuro | decompile & decode tool
-'''
-
 > **Python Obfuscation Decoder Tool**  
 > Created with ❤️ by [@IPLegion](https://t.me/IPLegion) & [@ferotier](https://t.me/ferotier)
 
