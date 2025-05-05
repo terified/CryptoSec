@@ -8,15 +8,15 @@
 ## 📦 Installation  
 
 ```bash
-git clone https://github.com/terified/deobfuscator.git
-cd deobfuscator
-python3 -m pip install -r requirements.txt
+git clone https://github.com/terified/CryptoSec.git
+cd CryptoSec
+python pip install -r requirements.txt
 📖 How to Use
 🔓 Decode Zlib & Base64
 Copy the obfuscated string from your Python file.
 
 Open this file:
-C:\Users\h1xx\Desktop\CryptoSec\base64_zlib_decode.txt
+C:\Users\Alex\Desktop\CryptoSec\base64_zlib_decode.txt
 Paste your string in the following format:
 exec((_)(b'your_encoded_string_here'))
 📌 Example:
@@ -35,7 +35,7 @@ Provide the path to this file when prompted by the decoder program.
 _=lambda __:__import__('marshal').loads(__import__('gzip').decompress(__import__('lzma').decompress(__import__('zlib').decompress(__import__('base64').b64decode(__[::-1])))))
 exec(_('AnotherObfuscatedString'))
 ⚡ Console Preview
-C:\декомпилятор> python decoder_script.py
+C:\CryptoSec> python decoder_script.py
 [+] Decoding complete!
 [+] Saved to: pyc_files/output.pyc
 🎨 Authors
