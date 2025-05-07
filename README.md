@@ -3,6 +3,9 @@
 > **Python Obfuscation Decoder Tool**  
 > Created with ❤️ by [@IPLegion](https://t.me/IPLegion) & [@ferotier](https://t.me/ferotier)
 
+
+![screenshot of tool]([https://cdn.discordapp.com/attachments/1349497155764879548/1369702746613223454/image.png?ex=681cd296&is=681b8116&hm=c979809028ada63fb9e78915bbea43068f686a285f6d0c025314727adbcb846a&])
+
 ---
 
 ## 📦 **Installation**  
