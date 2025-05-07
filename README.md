@@ -3,8 +3,7 @@
 > **Python Obfuscation Decoder Tool**  
 > Created with ❤️ by [@IPLegion](https://t.me/IPLegion) & [@ferotier](https://t.me/ferotier)
 
-
-![screenshot of tool]([image.png])
+![screenshot of tool](image.png)
 
 ---
 
